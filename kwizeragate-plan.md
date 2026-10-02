@@ -377,5 +377,5 @@ Set `APP_ENV=production` in `.env` to activate real IBM API calls. The stubs bec
 | Technical build — pathway fit | IBM Verify, QRadar, Guardium all present and documented |
 | Sector case-study grounding | BIF currency, BRB licensing, Bujumbura IP ranges, ARCT data rules |
 | Audience feature implementation | `/auth` (adaptive MFA), `/transfer` (SIEM stream), `/webhook` (anomaly suspend) all functional |
-| Demo & presentation | [Video Demo Walkthrough](https://1drv.ms/v/c/2bb2f9afc8ae1149/IQCHJjnHzWfAQY05ac-7v-RAAZnYJwpf-7RJuIVRuyjS0ho?e=pPVf5r) · `test_attacks.py` produces live PASS/FAIL output for the walkthrough |
+| Demo & presentation | [KwizeraGate VideoDemo.mp4](https://1drv.ms/v/c/2bb2f9afc8ae1149/IQCHJjnHzWfAQY05ac-7v-RAAY6GN3OULaFws6Xx1zj3mFE?e=0zF5HR) · `test_attacks.py` produces live PASS/FAIL output for the walkthrough |
 | Documentation / handoff notes | README, docs/, `.env.example`, IBM swap guide — another team can pick this up |

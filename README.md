@@ -12,7 +12,7 @@
 
 | What                 | URL                                                                                                                         |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| **Video Demo**       | [OneDrive Video Walkthrough](https://1drv.ms/v/c/2bb2f9afc8ae1149/IQCHJjnHzWfAQY05ac-7v-RAAZnYJwpf-7RJuIVRuyjS0ho?e=pPVf5r) |
+| **Video Demo**       | [KwizeraGate VideoDemo.mp4](https://1drv.ms/v/c/2bb2f9afc8ae1149/IQCHJjnHzWfAQY05ac-7v-RAAY6GN3OULaFws6Xx1zj3mFE?e=0zF5HR) |
 | **Live Dashboard**   | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/                                              |
 | **Swagger API Docs** | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/docs                                          |
 | **Health Probe**     | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/health                                        |
@@ -134,7 +134,7 @@ Results: 5/5 passed
 
 | Item                 | Result                                                                                                                         |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| **Video Demo**       | [OneDrive Walkthrough Video](https://1drv.ms/v/c/2bb2f9afc8ae1149/IQCHJjnHzWfAQY05ac-7v-RAAZnYJwpf-7RJuIVRuyjS0ho?e=pPVf5r) 🎬 |
+| **Video Demo**       | [KwizeraGate VideoDemo.mp4](https://1drv.ms/v/c/2bb2f9afc8ae1149/IQCHJjnHzWfAQY05ac-7v-RAAY6GN3OULaFws6Xx1zj3mFE?e=0zF5HR) 🎬 |
 | **Public URL**       | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com                                                  |
 | **Dashboard**        | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/                                                 |
 | **Swagger API Docs** | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/docs                                             |
@@ -233,7 +233,7 @@ See [`docs/burundi-compliance.md`](docs/burundi-compliance.md) for full regulato
 | Technical build — Cybersecurity pathway | IBM Verify (adaptive MFA) + IBM QRadar (SIEM) + IBM Guardium (DB security) all integrated                                                                                                            |
 | Sector case-study grounding             | BIF currency, BRB licensing, Bujumbura IP ranges, ARCT data rules, AML/CFT logging                                                                                                                   |
 | Audience feature implementation         | `/auth` (MFA), `/transfer` (SIEM stream), `/webhook/qradar-suspend` (anomaly response)                                                                                                               |
-| Demo & presentation                     | [Video Demo Walkthrough](https://1drv.ms/v/c/2bb2f9afc8ae1149/IQCHJjnHzWfAQY05ac-7v-RAAZnYJwpf-7RJuIVRuyjS0ho?e=pPVf5r) · `test_attacks.py` (5/5 PASS on live cluster) · Live Dashboard + Swagger ✅ |
+| Demo & presentation                     | [KwizeraGate VideoDemo.mp4](https://1drv.ms/v/c/2bb2f9afc8ae1149/IQCHJjnHzWfAQY05ac-7v-RAAY6GN3OULaFws6Xx1zj3mFE?e=0zF5HR) · `test_attacks.py` (5/5 PASS on live cluster) · Live Dashboard + Swagger ✅ |
 | Documentation / handoff notes           | README, `docs/`, `.env.example`, IBM swap guide                                                                                                                                                      |
 
 ---
