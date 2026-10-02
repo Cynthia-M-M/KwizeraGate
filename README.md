@@ -8,6 +8,19 @@
 
 ---
 
+## 🌐 Live Environment Links
+
+| What                 | URL                                                                                                                         |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| **Video Demo**       | [OneDrive Video Walkthrough](https://1drv.ms/v/c/2bb2f9afc8ae1149/IQCHJjnHzWfAQY05ac-7v-RAAZnYJwpf-7RJuIVRuyjS0ho?e=pPVf5r) |
+| **Live Dashboard**   | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/                                              |
+| **Swagger API Docs** | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/docs                                          |
+| **Health Probe**     | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/health                                        |
+
+> **Cluster:** TechZone OCPv · OpenShift on IBM Cloud · `itz-7zzjya` · Deployed October 2, 2026
+
+---
+
 ## What Is KwizeraGate?
 
 KwizeraGate is a cloud-native, **Zero-Trust payment entry middleware** designed to secure
@@ -39,7 +52,7 @@ behavioral anomaly pipeline backed by IBM QRadar — before any payment reaches 
 | ORM               | SQLAlchemy 2.x                                  |
 | Auth              | JWT (`python-jose`) · Adaptive MFA (IBM Verify) |
 | Containerization  | Docker · Docker Compose                         |
-| Deployment Target | IBM Cloud Code Engine                           |
+| Deployment Target | OpenShift on IBM Cloud (TechZone OCPv — ROKS)   |
 | SIEM              | IBM QRadar (log stream + webhook)               |
 | Data Security     | IBM Guardium (external DB observer)             |
 
@@ -113,6 +126,45 @@ Results: 5/5 passed
 
 ---
 
+## 🚀 Live Deployment — TechZone OpenShift Cluster
+
+> **Deployed:** Phase 3 Practical — IBM CLP111 Cybersecurity Pathway
+> **Cluster:** TechZone OCPv · OpenShift on IBM Cloud · `itz-7zzjya`
+> **Submitted:** October 2, 2026
+
+| Item                 | Result                                                                                                                         |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| **Video Demo**       | [OneDrive Walkthrough Video](https://1drv.ms/v/c/2bb2f9afc8ae1149/IQCHJjnHzWfAQY05ac-7v-RAAZnYJwpf-7RJuIVRuyjS0ho?e=pPVf5r) 🎬 |
+| **Public URL**       | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com                                                  |
+| **Dashboard**        | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/                                                 |
+| **Swagger API Docs** | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/docs                                             |
+| **Health probe**     | `/health` → `{"status":"ok","service":"KwizeraGate","region":"Burundi"}` ✅                                                    |
+| **DB seed**          | `TEST-KEY-BIF-2026` merchant created ✅                                                                                        |
+
+### Security Test Results — Live Cluster (5 / 5 PASS)
+
+```
+Target: https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com
+
+[1] Valid auth (Bujumbura IP)              PASS — low_risk, JWT issued
+[2] Spoofed IP → IBM Verify step-up        PASS — HTTP 401, biometric push message
+[3] Unknown merchant API key               PASS — HTTP 404
+[4] Valid BIF transfer + QRadar log        PASS — transaction_id=1, log written
+[5] Suspended merchant blocked             PASS — HTTP 403 after QRadar webhook
+
+Results: 5 / 5 passed
+```
+
+| Test | Scenario                                                           | Expected                              | Result  |
+| ---- | ------------------------------------------------------------------ | ------------------------------------- | ------- |
+| [1]  | Merchant authenticates from Bujumbura IP `196.41.0.5` (MTN subnet) | HTTP 200 + JWT                        | ✅ PASS |
+| [2]  | Attacker uses foreign IP `8.8.8.8` — IBM Verify triggers step-up   | HTTP 401 + biometric push             | ✅ PASS |
+| [3]  | Request with fabricated API key                                    | HTTP 404                              | ✅ PASS |
+| [4]  | Authenticated BIF transfer streamed to QRadar SIEM                 | HTTP 200 + `qradar_logs.json` written | ✅ PASS |
+| [5]  | QRadar CRE fires suspend webhook → merchant blocked                | HTTP 403 on transfer attempt          | ✅ PASS |
+
+---
+
 ## Project Structure
 
 ```
@@ -175,14 +227,14 @@ See [`docs/burundi-compliance.md`](docs/burundi-compliance.md) for full regulato
 
 ## Cornerstone Rubric Self-Check
 
-| Criterion                               | Evidence                                                                                  |
-| --------------------------------------- | ----------------------------------------------------------------------------------------- |
-| Environment & provisioning              | Docker Compose (`docker compose up`) + SQLite instant local run                           |
-| Technical build — Cybersecurity pathway | IBM Verify (adaptive MFA) + IBM QRadar (SIEM) + IBM Guardium (DB security) all integrated |
-| Sector case-study grounding             | BIF currency, BRB licensing, Bujumbura IP ranges, ARCT data rules, AML/CFT logging        |
-| Audience feature implementation         | `/auth` (MFA), `/transfer` (SIEM stream), `/webhook/qradar-suspend` (anomaly response)    |
-| Demo & presentation                     | `test_attacks.py` — live PASS/FAIL output for 10-min walkthrough                          |
-| Documentation / handoff notes           | README, `docs/`, `.env.example`, IBM swap guide                                           |
+| Criterion                               | Evidence                                                                                                                                                                                             |
+| --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Environment & provisioning              | Docker Compose (`docker compose up`) + SQLite local run + **OpenShift TechZone OCPv live deployment** ✅                                                                                             |
+| Technical build — Cybersecurity pathway | IBM Verify (adaptive MFA) + IBM QRadar (SIEM) + IBM Guardium (DB security) all integrated                                                                                                            |
+| Sector case-study grounding             | BIF currency, BRB licensing, Bujumbura IP ranges, ARCT data rules, AML/CFT logging                                                                                                                   |
+| Audience feature implementation         | `/auth` (MFA), `/transfer` (SIEM stream), `/webhook/qradar-suspend` (anomaly response)                                                                                                               |
+| Demo & presentation                     | [Video Demo Walkthrough](https://1drv.ms/v/c/2bb2f9afc8ae1149/IQCHJjnHzWfAQY05ac-7v-RAAZnYJwpf-7RJuIVRuyjS0ho?e=pPVf5r) · `test_attacks.py` (5/5 PASS on live cluster) · Live Dashboard + Swagger ✅ |
+| Documentation / handoff notes           | README, `docs/`, `.env.example`, IBM swap guide                                                                                                                                                      |
 
 ---
 
