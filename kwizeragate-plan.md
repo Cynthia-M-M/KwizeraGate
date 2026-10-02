@@ -105,7 +105,7 @@ Transaction
 **Todo List:**
 1. Create `database.py` — load `DATABASE_URL` from env, create SQLAlchemy engine with `check_same_thread=False` for SQLite compat, expose `SessionLocal` and `Base`
 2. Create `models.py` — define `Merchant` and `Transaction` ORM classes from schema above
-3. Create `db_init.py` — call `Base.metadata.create_all()`, then insert seed merchant with known `api_key = "TEST-KEY-BIF-2025"` if not already present
+3. Create `db_init.py` — call `Base.metadata.create_all()`, then insert seed merchant with known `api_key = "TEST-KEY-BIF-2026"` if not already present
 4. Add `get_db()` dependency function to `database.py` for FastAPI dependency injection
 
 **Relevant Context:** `DATABASE_URL` format: `sqlite:///./kwizeragate.db` (dev) vs `postgresql://user:pass@db:5432/kwizeragate` (Docker). SQLite requires `connect_args={"check_same_thread": False}`.

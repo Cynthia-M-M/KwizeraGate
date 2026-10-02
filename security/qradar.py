@@ -36,7 +36,7 @@ IBM QRADAR REAL API CONTRACT (for credential swap-in):
             "currency":      "BIF",
             "risk_level":    "low_risk",
             "transaction_id": 42,
-            "timestamp":     "2025-07-31T14:22:00Z"
+            "timestamp":     "2026-07-31T14:22:00Z"
         }
 
     QRadar Custom Rule Engine (CRE) should flag:

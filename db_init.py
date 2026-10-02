@@ -15,7 +15,7 @@ from models import Merchant
 SEED_MERCHANT = {
     "name": "BurundiPay Test Merchant",
     "location": "Bujumbura, Burundi",
-    "api_key": "TEST-KEY-BIF-2025",
+    "api_key": "TEST-KEY-BIF-2026",
 }
 
 

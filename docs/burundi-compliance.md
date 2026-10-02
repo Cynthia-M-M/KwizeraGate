@@ -80,7 +80,7 @@ Laundering Group). Financial institutions must implement:
 
 **Threshold to note:** ESAAMLG recommends enhanced monitoring for transactions above
 the equivalent of **USD 10,000** in a single day per merchant. KwizeraGate's QRadar
-rule for `amount > 10,000,000 BIF` (≈ USD 3,400 at mid-2025 rates) is intentionally
+rule for `amount > 10,000,000 BIF` (≈ USD 3,400 at mid-2026 rates) is intentionally
 conservative — adjust per BRB guidance.
 
 ---
@@ -160,6 +160,6 @@ during the first operating years.
 
 ---
 
-*KwizeraGate · Burundi Regulatory Compliance Notes · Modus Chora Studio · 2025*
+*KwizeraGate · Burundi Regulatory Compliance Notes · Modus Chora Studio · 2026*
 *This document is a planning baseline — not legal, tax or financial advice.*
 *Verify each item with the named authority before commitment.*

@@ -4,7 +4,7 @@
 **Company / Solution:** Modus Chora Studio · KwizeraGate
 **Pathway:** Cybersecurity — IBM Guardium · IBM QRadar · IBM Verify
 **Target Region:** Burundi (BurundiPay Digital Public Infrastructure)
-**Cornerstone Project — IBM x MC Studio Program 2025**
+**Cornerstone Project — IBM x MC Studio Program 2026**
 
 ---
 
@@ -21,27 +21,27 @@ behavioral anomaly pipeline backed by IBM QRadar — before any payment reaches 
 
 ## IBM Security Stack
 
-| IBM Technology | Integration Role |
-|---|---|
-| **IBM Verify** | Adaptive MFA — evaluates IP address and device fingerprint; triggers biometric push or step-up authentication for unrecognized origins outside Bujumbura |
-| **IBM QRadar** | SIEM log ingestion — FastAPI streams structured JSON transaction events to QRadar; custom rules detect anomalies and fire a webhook to auto-suspend the merchant session |
-| **IBM Guardium** | SQL ledger protection — monitors database traffic on the PostgreSQL instance; blocks unauthorized `SELECT *`, bulk reads, and DDL (`DROP`/`TRUNCATE`) operations |
+| IBM Technology   | Integration Role                                                                                                                                                         |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **IBM Verify**   | Adaptive MFA — evaluates IP address and device fingerprint; triggers biometric push or step-up authentication for unrecognized origins outside Bujumbura                 |
+| **IBM QRadar**   | SIEM log ingestion — FastAPI streams structured JSON transaction events to QRadar; custom rules detect anomalies and fire a webhook to auto-suspend the merchant session |
+| **IBM Guardium** | SQL ledger protection — monitors database traffic on the PostgreSQL instance; blocks unauthorized `SELECT *`, bulk reads, and DDL (`DROP`/`TRUNCATE`) operations         |
 
 ---
 
 ## Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Backend Framework | Python 3.11 · FastAPI · Uvicorn |
-| Database (dev) | SQLite (zero-setup, file-based) |
-| Database (prod) | PostgreSQL 15 (Docker Compose) |
-| ORM | SQLAlchemy 2.x |
-| Auth | JWT (`python-jose`) · Adaptive MFA (IBM Verify) |
-| Containerization | Docker · Docker Compose |
-| Deployment Target | IBM Cloud Code Engine |
-| SIEM | IBM QRadar (log stream + webhook) |
-| Data Security | IBM Guardium (external DB observer) |
+| Layer             | Technology                                      |
+| ----------------- | ----------------------------------------------- |
+| Backend Framework | Python 3.11 · FastAPI · Uvicorn                 |
+| Database (dev)    | SQLite (zero-setup, file-based)                 |
+| Database (prod)   | PostgreSQL 15 (Docker Compose)                  |
+| ORM               | SQLAlchemy 2.x                                  |
+| Auth              | JWT (`python-jose`) · Adaptive MFA (IBM Verify) |
+| Containerization  | Docker · Docker Compose                         |
+| Deployment Target | IBM Cloud Code Engine                           |
+| SIEM              | IBM QRadar (log stream + webhook)               |
+| Data Security     | IBM Guardium (external DB observer)             |
 
 ---
 
@@ -147,13 +147,13 @@ KwizeraGate/
 The application ships with **realistic stub functions** that mirror the real IBM API contracts.
 Set `APP_ENV=production` in `.env` and provide the credentials below to activate live IBM calls.
 
-| `.env` Variable | Where to find it in IBM Console |
-|---|---|
-| `IBM_VERIFY_TENANT_URL` | IBM Verify → Administration → Tenant Settings → Tenant URL |
-| `IBM_VERIFY_CLIENT_ID` | IBM Verify → API Clients → Create Client → Client ID |
-| `IBM_VERIFY_CLIENT_SECRET` | IBM Verify → API Clients → Create Client → Client Secret |
-| `QRADAR_HOST` | QRadar console URL (e.g. `https://qradar.yourdomain.com`) |
-| `QRADAR_TOKEN` | QRadar → Admin → Authorized Services → Add Token → Auth Token |
+| `.env` Variable            | Where to find it in IBM Console                               |
+| -------------------------- | ------------------------------------------------------------- |
+| `IBM_VERIFY_TENANT_URL`    | IBM Verify → Administration → Tenant Settings → Tenant URL    |
+| `IBM_VERIFY_CLIENT_ID`     | IBM Verify → API Clients → Create Client → Client ID          |
+| `IBM_VERIFY_CLIENT_SECRET` | IBM Verify → API Clients → Create Client → Client Secret      |
+| `QRADAR_HOST`              | QRadar console URL (e.g. `https://qradar.yourdomain.com`)     |
+| `QRADAR_TOKEN`             | QRadar → Admin → Authorized Services → Add Token → Auth Token |
 
 Stubs remain active as a fallback if a live IBM API call fails — no downtime during testing.
 
@@ -175,15 +175,15 @@ See [`docs/burundi-compliance.md`](docs/burundi-compliance.md) for full regulato
 
 ## Cornerstone Rubric Self-Check
 
-| Criterion | Evidence |
-|---|---|
-| Environment & provisioning | Docker Compose (`docker compose up`) + SQLite instant local run |
+| Criterion                               | Evidence                                                                                  |
+| --------------------------------------- | ----------------------------------------------------------------------------------------- |
+| Environment & provisioning              | Docker Compose (`docker compose up`) + SQLite instant local run                           |
 | Technical build — Cybersecurity pathway | IBM Verify (adaptive MFA) + IBM QRadar (SIEM) + IBM Guardium (DB security) all integrated |
-| Sector case-study grounding | BIF currency, BRB licensing, Bujumbura IP ranges, ARCT data rules, AML/CFT logging |
-| Audience feature implementation | `/auth` (MFA), `/transfer` (SIEM stream), `/webhook/qradar-suspend` (anomaly response) |
-| Demo & presentation | `test_attacks.py` — live PASS/FAIL output for 10-min walkthrough |
-| Documentation / handoff notes | README, `docs/`, `.env.example`, IBM swap guide |
+| Sector case-study grounding             | BIF currency, BRB licensing, Bujumbura IP ranges, ARCT data rules, AML/CFT logging        |
+| Audience feature implementation         | `/auth` (MFA), `/transfer` (SIEM stream), `/webhook/qradar-suspend` (anomaly response)    |
+| Demo & presentation                     | `test_attacks.py` — live PASS/FAIL output for 10-min walkthrough                          |
+| Documentation / handoff notes           | README, `docs/`, `.env.example`, IBM swap guide                                           |
 
 ---
 
-*KwizeraGate — Zero-Trust Payment Security for BurundiPay · Modus Chora Studio · 2025*
+_KwizeraGate — Zero-Trust Payment Security for BurundiPay · Modus Chora Studio · 2026_

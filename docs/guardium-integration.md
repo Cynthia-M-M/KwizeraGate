@@ -162,4 +162,4 @@ requirements and ARCT data protection audit obligations.
 
 ---
 
-*KwizeraGate · IBM Guardium Integration Notes · Modus Chora Studio · 2025*
+*KwizeraGate · IBM Guardium Integration Notes · Modus Chora Studio · 2026*

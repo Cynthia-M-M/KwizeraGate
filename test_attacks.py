@@ -34,7 +34,7 @@ import requests
 
 # ── Configuration ─────────────────────────────────────────────────────────────
 BASE_URL    = "http://localhost:8000"
-SEED_APIKEY = "TEST-KEY-BIF-2025"       # Created by db_init.py
+SEED_APIKEY = "TEST-KEY-BIF-2026"       # Created by db_init.py
 
 # ── Colour helpers ────────────────────────────────────────────────────────────
 GREEN  = "\033[92m"

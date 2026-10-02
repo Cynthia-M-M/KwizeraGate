@@ -266,7 +266,7 @@ def dashboard(db: Session = Depends(get_db)):
   </div>
 
   <div class="footer">
-    KwizeraGate · Zero-Trust Payment Security for BurundiPay · Modus Chora Studio · 2025<br/>
+    KwizeraGate · Zero-Trust Payment Security for BurundiPay · Modus Chora Studio · 2026<br/>
     IBM Cybersecurity Pathway — IBM Verify · IBM QRadar · IBM Guardium
   </div>
 </body>
