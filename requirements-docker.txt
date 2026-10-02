@@ -1,0 +1,5 @@
+# requirements-docker.txt
+# Used inside the Docker container (Postgres headers available in the image).
+# Extends the base requirements.txt with the Postgres driver.
+-r requirements.txt
+psycopg2-binary==2.9.9

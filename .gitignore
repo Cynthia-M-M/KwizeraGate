@@ -1,0 +1,24 @@
+cat << 'EOF' > .gitignore
+# Environment & Secrets
+.env
+*.env
+
+# Python Cache & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+
+# Local Databases & Logs
+*.db
+*.sqlite3
+qradar_logs.json
+*.log
+
+# IDE & OS Metadata
+.vscode/
+.idea/
+.DS_Store
+EOF

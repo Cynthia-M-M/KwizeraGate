@@ -1,0 +1,60 @@
+# ── KwizeraGate Docker Compose ───────────────────────────────────────────────
+# Author: Cynthia Moraa · Modus Chora Studio
+#
+# Spins up two services:
+#   db  — PostgreSQL 15 (production database)
+#   app — KwizeraGate FastAPI (waits for db to be healthy before starting)
+#
+# Usage:
+#   1. Edit .env — set DATABASE_URL to the postgresql:// line
+#   2. docker compose up --build
+#   3. App available at http://localhost:8000
+#   4. API docs at http://localhost:8000/docs
+
+version: "3.9"
+
+services:
+
+  db:
+    image: postgres:15-alpine
+    container_name: kwizeragate_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER:     kwizera
+      POSTGRES_PASSWORD: kwizerapass
+      POSTGRES_DB:       kwizeragate
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U kwizera -d kwizeragate"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+    ports:
+      - "5432:5432"   # Optional: expose for local DB client access
+
+  app:
+    build: .
+    container_name: kwizeragate_app
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      # Override DATABASE_URL to point at the Postgres container.
+      # The value in .env may be the SQLite line — this overrides it for Docker.
+      DATABASE_URL: postgresql://kwizera:kwizerapass@db:5432/kwizeragate
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:8000/health')\""]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+volumes:
+  postgres_data:
+    name: kwizeragate_postgres_data
