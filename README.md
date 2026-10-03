@@ -10,12 +10,13 @@
 
 ## 🌐 Live Environment Links
 
-| What                 | URL                                                                                                                        |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| **Video Demo**       | [KwizeraGate VideoDemo.mp4](https://1drv.ms/v/c/2bb2f9afc8ae1149/IQA7cfk1EQ4KT6hMsgMybZw7AYCfWnav5GF6lGaW5Ze5EzM?e=b4ilEA) |
-| **Live Dashboard**   | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/                                             |
-| **Swagger API Docs** | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/docs                                         |
-| **Health Probe**     | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/health                                       |
+| What                  | URL                                                                                                                        |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| **Presentation Deck** | [KwizeraGate Security Project.pdf](https://1drv.ms/b/c/2bb2f9afc8ae1149/IQBrWKtcmk-rQr7Czi3TPvaiARtj31xysP0AT5ZiKcRTWz4?e=pERiqd) |
+| **Video Demo**        | [KwizeraGate VideoDemo.mp4](https://1drv.ms/v/c/2bb2f9afc8ae1149/IQA7cfk1EQ4KT6hMsgMybZw7AYCfWnav5GF6lGaW5Ze5EzM?e=b4ilEA) |
+| **Live Dashboard**    | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/                                             |
+| **Swagger API Docs**  | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/docs                                         |
+| **Health Probe**      | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/health                                       |
 
 > **Cluster:** TechZone OCPv · OpenShift on IBM Cloud · `itz-7zzjya` · Deployed October 2, 2026
 
