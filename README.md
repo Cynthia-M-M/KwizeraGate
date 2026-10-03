@@ -10,12 +10,12 @@
 
 ## 🌐 Live Environment Links
 
-| What                 | URL                                                                                                                         |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| **Video Demo**       | [KwizeraGate VideoDemo.mp4](https://1drv.ms/v/c/2bb2f9afc8ae1149/IQCHJjnHzWfAQY05ac-7v-RAAY6GN3OULaFws6Xx1zj3mFE?e=0zF5HR) |
-| **Live Dashboard**   | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/                                              |
-| **Swagger API Docs** | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/docs                                          |
-| **Health Probe**     | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/health                                        |
+| What                 | URL                                                                                                                        |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| **Video Demo**       | [KwizeraGate VideoDemo.mp4](https://1drv.ms/v/c/2bb2f9afc8ae1149/IQA7cfk1EQ4KT6hMsgMybZw7AYCfWnav5GF6lGaW5Ze5EzM?e=b4ilEA) |
+| **Live Dashboard**   | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/                                             |
+| **Swagger API Docs** | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/docs                                         |
+| **Health Probe**     | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/health                                       |
 
 > **Cluster:** TechZone OCPv · OpenShift on IBM Cloud · `itz-7zzjya` · Deployed October 2, 2026
 
@@ -132,14 +132,14 @@ Results: 5/5 passed
 > **Cluster:** TechZone OCPv · OpenShift on IBM Cloud · `itz-7zzjya`
 > **Submitted:** October 2, 2026
 
-| Item                 | Result                                                                                                                         |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Item                 | Result                                                                                                                        |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | **Video Demo**       | [KwizeraGate VideoDemo.mp4](https://1drv.ms/v/c/2bb2f9afc8ae1149/IQCHJjnHzWfAQY05ac-7v-RAAY6GN3OULaFws6Xx1zj3mFE?e=0zF5HR) 🎬 |
-| **Public URL**       | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com                                                  |
-| **Dashboard**        | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/                                                 |
-| **Swagger API Docs** | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/docs                                             |
-| **Health probe**     | `/health` → `{"status":"ok","service":"KwizeraGate","region":"Burundi"}` ✅                                                    |
-| **DB seed**          | `TEST-KEY-BIF-2026` merchant created ✅                                                                                        |
+| **Public URL**       | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com                                                 |
+| **Dashboard**        | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/                                                |
+| **Swagger API Docs** | https://kwizeragate-app-kwizeragate.apps.itz-7zzjya.hub04-lb.techzone.ibm.com/docs                                            |
+| **Health probe**     | `/health` → `{"status":"ok","service":"KwizeraGate","region":"Burundi"}` ✅                                                   |
+| **DB seed**          | `TEST-KEY-BIF-2026` merchant created ✅                                                                                       |
 
 ### Security Test Results — Live Cluster (5 / 5 PASS)
 
@@ -227,14 +227,14 @@ See [`docs/burundi-compliance.md`](docs/burundi-compliance.md) for full regulato
 
 ## Cornerstone Rubric Self-Check
 
-| Criterion                               | Evidence                                                                                                                                                                                             |
-| --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Environment & provisioning              | Docker Compose (`docker compose up`) + SQLite local run + **OpenShift TechZone OCPv live deployment** ✅                                                                                             |
-| Technical build — Cybersecurity pathway | IBM Verify (adaptive MFA) + IBM QRadar (SIEM) + IBM Guardium (DB security) all integrated                                                                                                            |
-| Sector case-study grounding             | BIF currency, BRB licensing, Bujumbura IP ranges, ARCT data rules, AML/CFT logging                                                                                                                   |
-| Audience feature implementation         | `/auth` (MFA), `/transfer` (SIEM stream), `/webhook/qradar-suspend` (anomaly response)                                                                                                               |
-| Demo & presentation                     | [KwizeraGate VideoDemo.mp4](https://1drv.ms/v/c/2bb2f9afc8ae1149/IQCHJjnHzWfAQY05ac-7v-RAAY6GN3OULaFws6Xx1zj3mFE?e=0zF5HR) · `test_attacks.py` (5/5 PASS on live cluster) · Live Dashboard + Swagger ✅ |
-| Documentation / handoff notes           | README, `docs/`, `.env.example`, IBM swap guide                                                                                                                                                      |
+| Criterion                               | Evidence                                                                                                                                                                                                |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Environment & provisioning              | Docker Compose (`docker compose up`) + SQLite local run + **OpenShift TechZone OCPv live deployment** ✅                                                                                                |
+| Technical build — Cybersecurity pathway | IBM Verify (adaptive MFA) + IBM QRadar (SIEM) + IBM Guardium (DB security) all integrated                                                                                                               |
+| Sector case-study grounding             | BIF currency, BRB licensing, Bujumbura IP ranges, ARCT data rules, AML/CFT logging                                                                                                                      |
+| Audience feature implementation         | `/auth` (MFA), `/transfer` (SIEM stream), `/webhook/qradar-suspend` (anomaly response)                                                                                                                  |
+| Demo & presentation                     | [KwizeraGate VideoDemo.mp4](https://1drv.ms/v/c/2bb2f9afc8ae1149/IQDM4rV7D6cuQY-ybytREVQQAUzV2fNTKyupLA4L3QvXV3k?e=FjflvJ) · `test_attacks.py` (5/5 PASS on live cluster) · Live Dashboard + Swagger ✅ |
+| Documentation / handoff notes           | README, `docs/`, `.env.example`, IBM swap guide                                                                                                                                                         |
 
 ---
 
